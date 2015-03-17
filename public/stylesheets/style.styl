@@ -1,5 +1,34 @@
+@import 'nib'
+
+// Colours
+brand-primary = #00bad2
+background-colour = #444
+
+// Margins
+margin = 8px
+
+html
+  height: 100%
+
 body
-  padding: 50px
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif
+  padding: margin 
+  font: 14px "Effra", "Lucida Grande", Helvetica, Arial, sans-serif
+  background: background-colour
+  color: white
+
 a
-  color: #00B7FF
+  color: #fff
+  transition: color .2s linear
+  &:hover
+    color: #eee
+
+section.main
+  position: absolute
+  top: 100px
+  left: 0
+  right: 0
+  bottom: 0
+  padding: 4px
+  
+@require '_nav'
+@require '_tiles'  

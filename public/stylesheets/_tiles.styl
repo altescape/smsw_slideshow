@@ -1,0 +1,55 @@
+tile(n)
+  .tile
+    background-color: mix(n, whitesmoke, 20%)
+
+.category-item
+  flex-direction: column
+  display: flex
+  position: relative
+  float: left
+  vertical-align: top
+  width: 50%
+  height: 224px
+  will-change: transform
+  .tile
+    margin: 4px
+    background-color: whitesmoke
+    color: background-colour
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+  &.green
+   tile(green) 
+  &.blue
+   tile(blue) 
+  &.pink
+   tile(pink) 
+  &.yellow
+   tile(yellow) 
+  &.purple
+   tile(purple) 
+
+.wide
+  .category-item
+    width: calc(100% / 6)
+    height: calc(100% / 3)
+    &:nth-of-type(1) 
+    &:nth-of-type(5) 
+      width: calc(100% / 3)
+      height: calc(100% / 3 * 2)
+    &:nth-of-type(4) 
+      width: calc(100% / 3)
+    &:nth-of-type(9)
+      position: absolute
+      top: calc(100% / 3 * 2)
+      left: 4px
+      width: calc(100% / 6 - 4px)
+      height: calc(100% / 3 - 4px)
+    &:nth-of-type(10)
+      position: absolute
+      top: calc(100% / 3 * 2)
+      left: calc(100% / 6) 
+      width: calc(100% / 6)
+      height: calc(100% / 3 - 4px)

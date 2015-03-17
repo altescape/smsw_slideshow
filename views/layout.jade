@@ -3,5 +3,17 @@ html
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
+    script(src="//use.typekit.net/hhl4gvf.js")
+    script try{Typekit.load();}catch(e){}
+    script(src="/javascripts//jquery.min.js")
+  body.wide
+
+    nav.main
+      h1.brand: a(href="#"): img(src="/images/smsw-logo.png")
+      ul
+        li: a(href="#") Link
+        li: a(href="#") Link
+        li: a(href="#") Link
+    
+    section.main
+      block content
