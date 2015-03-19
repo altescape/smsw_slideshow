@@ -2,18 +2,18 @@ doctype html
 html
   head
     title= title
+    meta(name="apple-mobile-web-app-capable" content="yes")
+    meta(name="apple-mobile-web-app-status-bar-style" content="black-translucent")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui")
     link(rel='stylesheet', href='/stylesheets/style.css')
     script(src="//use.typekit.net/hhl4gvf.js")
     script try{Typekit.load();}catch(e){}
-    script(src="/javascripts//jquery.min.js")
-  body.wide
+    link(rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css")
 
-    nav.main
-      h1.brand: a(href="#"): img(src="/images/smsw-logo.png")
-      ul
-        li: a(href="#") Link
-        li: a(href="#") Link
-        li: a(href="#") Link
-    
+  body
     section.main
       block content
+
+    script(src="/javascripts/jquery.min.js")
+    script(src="/javascripts/reveal.js/js/reveal.js")
+    script(src="/javascripts/app.js")

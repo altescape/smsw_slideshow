@@ -1,0 +1,63 @@
+.home
+  .reveal .slides
+    margin 0 auto
+  .neon-container
+    position relative
+    top 0
+    left 0
+    right 0
+    bottom 0
+    zoom 0.5
+    .neon
+      display block
+      position absolute
+      height 100px
+      width 100px
+      background-color transparent
+      margin 5px
+      background-image url(/images/neon.png)
+      background-position 0 0
+      background-repeat no-repeat
+      transition all .2s linear
+      &:hover
+        cursor: pointer;
+      &.creative-lab-sign
+        background-position -40px -50px
+        width 900px
+        height 720px
+        top 250px
+        left 450px
+      &.factory-floor-sign
+        background-position -30px -870px
+        width 910px
+        height 380px
+        top 970px
+        left 450px
+      &.ideas-dept-sign
+        background-position -10px -1250px
+        width 1170px
+        height 240px
+        top 30px
+        left 450px
+      &.innovation-hub-sign
+        background-position -1010px 0
+        width 440px
+        height 880px
+        top 310px
+        left 1350px
+      &.management-suite-sign
+        background-position -1518px 0
+        width 530px
+        height 1200px
+        top 0
+        left 0
+
+
+@css {
+  .home .neon-container .neon {
+    -webkit-filter: contrast(1) opacity(80%) saturate(1);
+  }
+  .home .neon-container .neon:hover {
+    -webkit-filter: contrast(1.5) opacity(100%) saturate(1.8);
+  }  
+}  

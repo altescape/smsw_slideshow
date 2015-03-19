@@ -1,34 +1,71 @@
 @import 'nib'
+@import '../javascripts/reveal.js/css/reveal.css'
+@import '../javascripts/reveal.js/css/theme/black.css'
 
 // Colours
-brand-primary = #00bad2
 background-colour = #444
+pink = #fd02b5
+blue = #5ecef2
 
 // Margins
 margin = 8px
 
 html
-  height: 100%
+  height 100%
 
 body
-  padding: margin 
-  font: 14px "Effra", "Lucida Grande", Helvetica, Arial, sans-serif
-  background: background-colour
-  color: white
+  padding margin 
+  background background-colour
+  color white
+  font-size 14px
 
-a
-  color: #fff
-  transition: color .2s linear
+p, ul, ol, body, table
+  font-weight 200 !important
+  font-family "jubilat" !important
+
+h1,h2
+  font-family "jubilat", Helvetica, Arial, sans-serif !important
+  font-weight 900 !important
+  text-transform capitalize !important
+
+h1
+  font-size 2em !important
+
+h2
+  font-size 1.3em !important
+
+a 
+  color #fff
+  transition color .2s linear
   &:hover
-    color: #eee
+    color #eee
 
 section.main
-  position: absolute
-  top: 100px
-  left: 0
-  right: 0
-  bottom: 0
-  padding: 4px
+  position absolute
+  top 0
+  left 0
+  bottom 0
+  right 0
+  box-shadow 0 2px 5px 0 rgba(0, 0, 0, 0.26) inset
   
-@require '_nav'
-@require '_tiles'  
+// @require '_nav'
+@require '_slide_nav'
+
+// Home
+@require '_home'
+
+// The Management Suite
+.the-management-suite
+  h1, h2, p, ul, ol, table
+    color black
+    text-align left !important
+    display block
+
+  h1
+    font-size 1.4em !important
+
+  h2
+    font-size 0.8em !important
+
+  p, ul, ol, table
+    font-size 0.6em !important

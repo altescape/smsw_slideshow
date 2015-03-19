@@ -1,0 +1,56 @@
+control-box = 99px
+.reveal
+  .controls
+    width: control-box
+    height: control-box
+    div.navigate-left
+      top: (control-box / 3)
+      left: 0
+    div.navigate-right
+      top: (control-box / 3)
+      right: 0
+      left: auto
+    div.navigate-up
+      top: 0
+      left: (control-box / 3)
+    div.navigate-down
+      top: auto
+      bottom: 0
+      left: (control-box / 3)
+    div
+      background: rgba(white, 20%)
+      width: (control-box / 3)
+      height: (control-box / 3)
+      border: none
+      border-radius: 50%
+      font-size: 16px
+      box-shadow: 0 0 0 2px rgba(white, 60%)
+      transition: all .15s linear
+      &:hover
+        background: rgba(white, 100%)
+        color: black
+        box-shadow: 0 0 30px 2px rgba(0, 0, 0, 0.1), 0 0 3px 2px rgba(0, 0, 0, 0.1) 
+      &:before
+        font-family: FontAwesome
+        content: "\f105"
+        display: block
+        width: (control-box / 3)
+        height: (control-box / 3)
+        text-align: center
+        line-height: (control-box / 3)
+
+    div.navigate-left
+      &:before
+        content: "\f104"
+        
+    div.navigate-right
+      &:before
+        content: "\f105"
+
+    div.navigate-up
+      &:before
+        content: "\f106"
+
+    div.navigate-down
+      &:before
+        content: "\f107"
