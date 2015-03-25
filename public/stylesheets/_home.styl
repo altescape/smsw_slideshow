@@ -18,7 +18,8 @@
       background-image url(/images/neon.png)
       background-position 0 0
       background-repeat no-repeat
-      transition all .2s linear
+      transition -webkit-filter .05s linear
+      will-change -webkit-filter, opacity
       &:hover
         cursor: pointer;
       &.creative-lab-sign
@@ -57,7 +58,8 @@
   .home .neon-container .neon {
     -webkit-filter: contrast(1) opacity(80%) saturate(1);
   }
-  .home .neon-container .neon:hover {
+  .home .neon-container .neon:hover,
+  .home .neon-container .neon.lit {
     -webkit-filter: contrast(1.5) opacity(100%) saturate(1.8);
   }  
 }  

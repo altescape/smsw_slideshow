@@ -3,35 +3,39 @@ extends layout
 block content
   .reveal
     .slides
-      section(data-state="home" data-background="/images/home-background.jpg")
+      section(data-state="home" data-background="/images/home-background.jpg" )
         include slides/home/index
       
-      section(data-background="/images/the-management-suite.jpg" data-state="the-management-suite" data-background-transition="zoom")
+      section(data-background="/images/the-management-suite.jpg" data-state="the-management-suite" ) 
         h1 The Management Suite
         include slides/the-management-suite/index
         include slides/the-management-suite/introduction
         include slides/the-management-suite/additional-content-list
         include slides/the-management-suite/additional-content-table
 
-      section(data-background="/images/the-creative-lab-background.jpg" data-state="the-creative-lab")
+      section(data-background="/images/the-creative-lab.jpg" data-state="the-creative-lab" )
         h1 The Creative Lab 
         include slides/the-creative-lab/introduction
 
-      section(data-background="/images/the-ideas-factory.jpg" data-state="the-ideas-factory")
-        h1 The Ideas Factory
+      section(data-background="/images/the-ideas-dept.jpg" data-state="the-ideas-dept" )
+        h1 The Ideas Dept. 
         include slides/the-ideas-factory/introduction
 
-      section(data-transition="fade" data-background="/images/the-innovation-hub.jpg" data-state="the-innovation-hub")
+      section(data-background="/images/the-innovation-hub.jpg" data-state="the-innovation-hub" )
         h1 The Innovation Hub 
         include slides/the-innovation-hub/introduction
 
-      section(data-background="/images/the-factory-floor.jpg" data-state="the-factory-floor")
-        h1 The Factory Floor 
+      section(data-background="/images/warehouse-floor-background.jpg" data-state="the-factory-floor" )
+        h1 The Factory Floor
+        include slides/the-factory-floor/closed-doors
+        include slides/the-factory-floor/open-doors
         include slides/the-factory-floor/introduction
         include slides/the-factory-floor/additional-content
         include slides/the-factory-floor/additional-content-table
         include slides/the-factory-floor/additional-content-list
+        include slides/the-factory-floor/open-doors
+        include slides/the-factory-floor/closed-doors
 
-      section(data-background="#000" data-state="showreel")
+      section(data-background="#000" data-state="showreel" )
         h1 Showreel 
         include slides/showreel/video

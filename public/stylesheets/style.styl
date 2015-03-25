@@ -7,9 +7,6 @@ background-colour = #444
 pink = #fd02b5
 blue = #5ecef2
 
-// Margins
-margin = 8px
-
 html
   height 100%
 
@@ -17,11 +14,18 @@ body
   padding margin 
   background background-colour
   color white
-  font-size 14px
+  font-size 0.6em
 
-p, ul, ol, body, table
-  font-weight 200 !important
-  font-family "jubilat" !important
+.reveal
+  p, ul, ol, body, table
+    font-weight 200 !important
+    font-family "jubilat" !important
+    font-size 0.6em
+    line-height 1.5
+  .slides
+    text-align left
+  .slide-background
+    background-position bottom center !important
 
 h1,h2
   font-family "jubilat", Helvetica, Arial, sans-serif !important
@@ -29,10 +33,10 @@ h1,h2
   text-transform capitalize !important
 
 h1
-  font-size 2em !important
+  font-size 1.4em !important
 
 h2
-  font-size 1.3em !important
+  font-size 0.8em !important
 
 a 
   color #fff
@@ -48,24 +52,15 @@ section.main
   right 0
   box-shadow 0 2px 5px 0 rgba(0, 0, 0, 0.26) inset
   
-// @require '_nav'
 @require '_slide_nav'
-
-// Home
 @require '_home'
+@require '_doors'
 
-// The Management Suite
 .the-management-suite
+.the-factory-floor
+.the-creative-lab
+.the-innovation-hub
+.the-ideas-dept
   h1, h2, p, ul, ol, table
     color black
-    text-align left !important
-    display block
 
-  h1
-    font-size 1.4em !important
-
-  h2
-    font-size 0.8em !important
-
-  p, ul, ol, table
-    font-size 0.6em !important

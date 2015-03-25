@@ -1,0 +1,29 @@
+// Sliding Door    
+.doors
+  .door
+    z-index 2 
+    position absolute
+    left 0
+    top 0
+    bottom 11%
+    width 50%
+    background-image url(/images/warehouse-left-door.jpg)
+    background-position top left
+    background-repeat no-repeat
+    transition left .6s cubic-bezier(.17,.67,.83,.67), right .6s cubic-bezier(0.17, 0.67, 0.83, 0.67)
+    will-change left, right
+    background-size cover
+    box-shadow 0 0 15px rgba(0, 0, 0, 0.9)
+    &.right-door
+      right 0
+      left auto
+      width 50%
+      background-image url(/images/warehouse-right-door.jpg)
+      background-position top right
+
+.open-doors
+  .door
+    left -50%
+    &.right-door
+      right -50%
+
