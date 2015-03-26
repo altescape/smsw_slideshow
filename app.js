@@ -1,3 +1,5 @@
+process.env.PWD = process.cwd()
+
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -14,7 +16,7 @@ var slides = require('./routes/slides');
 var app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(process.env.PWD, 'views'));
 app.set('view engine', 'jade');
 
 function compile (str, path) {
@@ -24,16 +26,16 @@ function compile (str, path) {
     .use(nib());
 }
 
-app.use(favicon(__dirname + '/public/favicon.png'));
+app.use(favicon(process.env.PWD + '/public/favicon.png'));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(stylus.middleware({
-  src: path.join(__dirname, 'public'),
+  src: path.join(process.env.PWD, 'public'),
   compile: compile
 }));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(process.env.PWD, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
