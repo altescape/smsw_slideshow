@@ -2,7 +2,7 @@ Reveal.initialize({
   controls: true,
   progress: true,
   history: true,
-  center: false,
+  center: true,
   transition: 'none', // none/fade/slide/convex/concave/zoom
 });
 

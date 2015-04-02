@@ -11,32 +11,21 @@ html
   height 100%
 
 body
-  padding margin 
   background background-colour
-  color white
-  font-size 0.6em
+  color black
 
 .reveal
   p, ul, ol, body, table
     font-weight 200 !important
     font-family "jubilat" !important
-    font-size 0.6em
     line-height 1.5
-  .slides
-    text-align left
   .slide-background
-    background-position bottom center !important
+    background-position center center !important
 
-h1,h2
+h1,h2, h3, h4, h5, h6
   font-family "jubilat", Helvetica, Arial, sans-serif !important
   font-weight 900 !important
-  text-transform capitalize !important
-
-h1
-  font-size 1.4em !important
-
-h2
-  font-size 0.8em !important
+  text-transform inherit !important
 
 a 
   color #fff
@@ -61,6 +50,48 @@ section.main
 .the-creative-lab
 .the-innovation-hub
 .the-ideas-dept
-  h1, h2, p, ul, ol, table
+  h1,h2,h3,h4,h5,h6,p,ul,ol,table
     color black
 
+.biscuit
+  background black
+  position fixed
+  top 0
+  right 0
+  width 50px
+  height 2px
+  opacity 0.3
+  &:after
+    display none
+    width 50px
+    height 50px
+
+@media screen and (min-width : 320px)
+  .biscuit
+    background red
+    &:after
+      content "320"
+
+@media screen and (min-width : 480px)
+  .biscuit
+    background blue
+    &:after
+      content "480"
+
+@media screen and (min-width : 768px)
+  .biscuit
+    background purple
+    &:after
+      content "768"
+    
+@media screen and (min-width : 992px)
+  .biscuit
+    background olive
+    &:after
+      content "992"
+    
+@media screen and (min-width : 1200px)
+  .biscuit
+    background yellow
+    &:after
+      content "1200"
