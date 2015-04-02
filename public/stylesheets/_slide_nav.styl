@@ -3,6 +3,11 @@ control-box = 99px
   .controls
     width: control-box
     height: control-box
+    div.navigate-home
+      top: (control-box / 3)
+      left: (control-box / 3)
+      background: rgba(0, 0, 0, 0)
+      color: #000
     div.navigate-left
       top: (control-box / 3)
       left: 0
@@ -18,18 +23,16 @@ control-box = 99px
       bottom: 0
       left: (control-box / 3)
     div
-      background: rgba(white, 20%)
+      background: rgba(black, 85%)
       width: (control-box / 3)
       height: (control-box / 3)
       border: none
       border-radius: 50%
       font-size: 16px
-      box-shadow: 0 0 0 2px rgba(white, 60%)
       transition: all .15s linear
       &:hover
         background: rgba(white, 100%)
         color: black
-        box-shadow: 0 0 30px 2px rgba(0, 0, 0, 0.1), 0 0 3px 2px rgba(0, 0, 0, 0.1) 
       &:before
         font-family: FontAwesome
         content: "\f105"
@@ -39,6 +42,10 @@ control-box = 99px
         text-align: center
         line-height: (control-box / 3)
 
+    div.navigate-home
+      &:before
+        content: "\f015"
+        
     div.navigate-left
       &:before
         content: "\f104"
