@@ -8,15 +8,17 @@ Reveal.initialize({
 
 var HOMEBUTTON = (function (){
   var controls = $('.controls');
-  var home_button = "<div class='navigate-home'/>";
+  var element = "<div class='navigate-home'/>";
+  var button;
   var add = function () {
-    controls.prepend(home_button);
+    controls.prepend(element);
+    button = $('.navigate-home');
   };
   var activate = function () {
-    $('.navigate-home').addClass('enabled');
+    button.addClass('enabled');
   };
   var deactivate = function () {
-    $('.navigate-home').removeClass('enabled');
+    button.removeClass('enabled');
   };
   var check_status = function (event) {
     if (event.indexh > 0) {
@@ -25,9 +27,15 @@ var HOMEBUTTON = (function (){
       deactivate();
     }
   };
+  var click = function () {
+    controls.on('click', '.navigate-home', function () {
+      Reveal.slide(0);
+    });
+  };
   return {
     add: add,
-    check_status: check_status 
+    check_status: check_status,
+    click: click
   };
 }());
 
@@ -38,7 +46,7 @@ var NEON = (function () {
   };
   var timings = function () {
     setInterval(function(){
-      var el = get_random(0,4);
+      var el = get_random(0,6);
       neon_signs.eq(el).addClass('lit');
       setTimeout(function(){
         neon_signs.eq(el).removeClass('lit');
@@ -76,6 +84,7 @@ Reveal.addEventListener( 'ready', function( event ) {
   DOORS.init();
   HOMEBUTTON.add();
   HOMEBUTTON.check_status(event);
+  HOMEBUTTON.click();
 });
 
 
