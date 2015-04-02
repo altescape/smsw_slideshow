@@ -21,7 +21,7 @@ _You have been warned!_
 * When adding or removing a slide go into `views/index.jade` and add or delete the include lines - you don't need to use the jade extension.
 * Images live in `public/images` - you do not need to refence `public` so urls for images are `images/picture-of-1001-imacs.jpg`.
 * JavaScripts live in `public/javascripts`. The only file to edit should be `public/javascripts/app.js` - don't edit any other!!
-* Stylesheets live in `pubclic/sylesheets`. They use a language called [Stylus](http://learnboost.github.io/stylus/) - it's like LESS/SCSS but cleaner. If you edit these you don't need to compile with Grunt/Gulp - it's all taken care of by the wonderful Node and Express server.
+* Stylesheets live in `public/sylesheets`. They use a language called [Stylus](http://learnboost.github.io/stylus/) - it's like LESS/SCSS but cleaner. When you edit these you don't need to compile with Grunt/Gulp - it's all taken care of by the wonderful Node Express server.
 
 ---
 
@@ -35,7 +35,7 @@ _You have been warned!_
 * Look at these [Heroku docs](https://devcenter.heroku.com/articles/getting-started-with-nodejs#set-up) to download the Heroku Toolbelt. You then need to login via console.
 * Then the only command you'll need to deploy is: `git push heroku master`
 
-So a typical deployment runs like this:
+So a typical deployment runs like this...
 ```
 git add .
 git commit -m "A message here"
