@@ -10,6 +10,7 @@ _You have been warned!_
 
 ### Run it
 * Clone this repo and to run it run `DEBUG=smsw_slideshow:* ./bin/www`.
+* `npm install`
 * Open `http://localhost:3000`.
 
 ---
