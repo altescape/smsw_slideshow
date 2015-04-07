@@ -9,8 +9,9 @@ If there is anything you (ie Michael) need to change that is done with reveal.cs
 _You have been warned!_
 
 ### Run it
+* Clone this repo `git clone https://github.com/altescape/smsw_slideshow.git`.
 * Install dev dependencies `npm install`
-* Clone this repo and to run it run `DEBUG=smsw_slideshow:* ./bin/www`.
+* Run `DEBUG=smsw_slideshow:* ./bin/www`.
 * Open `http://localhost:3000`.
 
 ---
