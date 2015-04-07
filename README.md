@@ -35,7 +35,7 @@ _You have been warned!_
 
 #### You will need to do the following:
 * Look at these [Heroku docs](https://devcenter.heroku.com/articles/getting-started-with-nodejs#set-up) to download the Heroku Toolbelt. You then need to login via console.
-* If cloning, run `heroku create` to add heroku git origin
+* If cloning, run `heroku git:remote -a appname` to add heroku git origin
 * Then the only command you'll need to deploy is: `git push heroku master`
 
 So a typical deployment runs like this...
