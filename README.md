@@ -9,8 +9,8 @@ If there is anything you (ie Michael) need to change that is done with reveal.cs
 _You have been warned!_
 
 ### Run it
+* Install dev dependencies `npm install`
 * Clone this repo and to run it run `DEBUG=smsw_slideshow:* ./bin/www`.
-* `npm install`
 * Open `http://localhost:3000`.
 
 ---
