@@ -46,7 +46,7 @@ var NEON = (function () {
   };
   var timings = function () {
     setInterval(function(){
-      var el = get_random(0,6);
+      var el = get_random(0,4);
       neon_signs.eq(el).addClass('lit');
       setTimeout(function(){
         neon_signs.eq(el).removeClass('lit');
