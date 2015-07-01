@@ -1,14 +1,13 @@
 # SMSW Slideshow
 
-## WARNING
+## Instructions
 
-Just to note: resist changing the sizes of fonts, the layout, the alignment - it's a massive pain in the arse. Even changing the background-position causes weird problems.
+### Deployment
 
-If there is anything you (ie Michael) need to change that is done with reveal.css, just say no!
+* Automatic deployment from master branch 
 
-_You have been warned!_
+### Run it locally
 
-### Run it
 * Clone this repo `git clone https://github.com/altescape/smsw_slideshow.git`.
 * Install dev dependencies `npm install`
 * Run `DEBUG=smsw_slideshow:* ./bin/www`.
@@ -16,7 +15,7 @@ _You have been warned!_
 
 ---
 
-### Add a slide
+### Adding a slide
 
 * All slides live in `views/slides/directory_name/slide_name.jade`
 * Slides are written in [Jade](http://jade-lang.com/) - you'll love it.
@@ -27,21 +26,7 @@ _You have been warned!_
 
 ---
 
-### Deploy
+### Server
 
-* It is deployed to [Heroku](https://dashboard.heroku.com), in case you need dashboard access (you shoudln't).
+* Heroku name: stormy-badlands-5749
 * The domain is [slideshow.smswmedia.com](slideshow.smswmedia.com) which is handled on CloudFlare.
-* Look on production server for logins.
-
-#### You will need to do the following:
-* Look at these [Heroku docs](https://devcenter.heroku.com/articles/getting-started-with-nodejs#set-up) to download the Heroku Toolbelt. You then need to login via console.
-* If cloning, run `heroku git:remote -a appname` to add heroku git origin
-* Then the only command you'll need to deploy is: `git push heroku master`
-
-So a typical deployment runs like this...
-```
-git add .
-git commit -m "A message here"
-git push
-git push heroku master
-```
